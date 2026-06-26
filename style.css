@@ -16,7 +16,39 @@
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     flex: 1;
+}
+
+.hero-section{
+    background-image: url("./assets/img/cappadocia.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 450px;
+}
+
+.hero-section-box {
+    height: 100%;
+    background-color: var(--primary-yellow);
+    position: relative;
+
+    padding: var(--spacing-m);
+}
+
+.hero-section-text-wrapper {
+    position: absolute;
+    top: 25%;
+}
+
+.hero-section-text-wrapper h2 {
+    color: var(--secondary-brown);
+}
+
+.hero-section-text-wrapper p {
+    width: 22ch;    
 }
 
 .mobile-nav {
