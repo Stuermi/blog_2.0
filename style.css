@@ -1,0 +1,47 @@
+@import "./styles/fonts.css";
+@import "./styles/variables.css";
+@import "./styles/standard.css";
+@import "./styles/utilities.css";
+
+.site-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--primary-green);
+}
+
+.logo {
+    width: 80px;
+}
+
+main {
+    flex: 1;
+}
+
+.mobile-nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    min-height: 85px;
+
+    background-color: var(--primary-yellow);
+
+    padding: var(--spacing-l);
+}
+
+.mobile-nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        padding-bottom: unset;
+    }
+}

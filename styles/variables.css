@@ -1,0 +1,20 @@
+:root {
+    --primary-green: #4EA487;
+    --primary-yellow: #F1C953;
+    --secondary-brown: #54370D;
+    --secondary-grey: #3D3D3D;
+
+    --spacing-xs: 4px;
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+
+    --radius-s: 8px;
+    --radius-m: 12px;
+    --radius-l: 16px;
+    --radius-round: 50%;
+    --radius-capsule: 999px;
+
+    --font-main: Palanquin;
+    --font-secondary: Arima;
+}
