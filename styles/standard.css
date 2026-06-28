@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,8 +10,10 @@ body {
     flex-direction: column;
 
     min-height: 100dvh;
+
     font-family: var(--font-main);
     line-height: 1.2;
+    color: var(--secondary-brown);
 }
 
 h1 {
