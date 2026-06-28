@@ -19,7 +19,7 @@
     </header>
 
     <main>
-        <section class="hero-section">
+        <section class="hero-section" id="heroSection">
             <div class="hero-section-box">
                 <div class="hero-section-text-wrapper">
                     <h2>Cappadocia</h2>
@@ -28,7 +28,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="highlightsSection">
             <h2 class="section-header">
                 <img src="./assets/icons/rocket_launch-yellow.svg" alt="rocket icon">
                 Highlights
@@ -49,7 +49,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="faqSection">
             <h2 class="section-header">
                 <img src="./assets/icons/live-help-yellow.svg" alt="quesionmark icon">
                 FAQ
@@ -123,6 +123,33 @@
                 </details>
             </div>
         </section>
+
+        <section class="content-section" id="contentSection">
+            <h2 class="section-header">
+                <img src="./assets/icons/person_pin-yellow.svg" alt="person icon">
+                Contact
+            </h2>
+            <form class="contact-form">
+                <label for="name">
+                    What's your name?
+                    <input type="text" name="name">
+                </label>
+                <label for="email">
+                    What's your email?
+                    <input type="email" name="email">
+                </label>
+                <label for="message">
+                    How can I help?
+                    <textarea name="message"></textarea>
+                </label>
+                <label for="checkbox" class="row">
+                    <input type="checkbox">
+                    <p>
+                        I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
+                    </p>
+                </label>
+            </form>
+        </section>
     </main>
 
     <footer>
@@ -132,22 +159,22 @@
     <nav class="mobile-nav">
         <ul class="mobile-nav__list">
             <li>
-                <a href="">
+                <a href="#heroSection">
                     <img src="./assets/icons/home.svg" alt="home icon">
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#highlightsSection">
                     <img src="./assets/icons/rocket_launch-green.svg" alt="rocket icon">
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#faqSection">
                     <img src="./assets/icons/live_help-green.svg" alt="questionmark icon">
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#contactSection">
                     <img src="./assets/icons/person_pin-green.svg" alt="person icon">
                 </a>
             </li>
