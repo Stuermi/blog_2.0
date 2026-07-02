@@ -23,8 +23,6 @@ main {
     flex: 1;
 
     gap: var(--spacing-l);
-
-    padding-bottom: 85px;
 }
 
 .hero-section {
@@ -218,6 +216,50 @@ details[open] .details-icon {
 .contact-form a {
     color: var(--primary-green);
     padding-inline: var(--spacing-s);
+}
+
+footer {
+    display: flex;
+    padding: var(--spacing-m);
+    gap: var(--spacing-m);
+
+
+    color: white;
+    background-color: var(--primary-green);
+    padding-bottom: calc(85px + var(--spacing-m));
+}
+
+footer a {
+    color: white;
+}
+
+.footer-wrapper-left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+
+}
+
+.footer-wrapper-left img {
+    display: inline;
+    height: 20px;
+    width: 20px;
+}
+
+.footer-wrapper-left p {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.footer-wrapper-right {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing-s);
+}
+
+.footer-wrapper-right img {
+    /* height: 32px; */
 }
 
 
