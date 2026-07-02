@@ -241,7 +241,6 @@ footer a {
 }
 
 .footer-wrapper-left img {
-    display: inline;
     height: 20px;
     width: 20px;
 }
@@ -257,11 +256,6 @@ footer a {
     align-items: flex-end;
     gap: var(--spacing-s);
 }
-
-.footer-wrapper-right img {
-    /* height: 32px; */
-}
-
 
 
 
