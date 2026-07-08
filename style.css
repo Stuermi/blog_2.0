@@ -89,11 +89,33 @@ main {
     border-top-right-radius: 100px;
 
     overflow: hidden;
+
+    transition: all 0.3s ease-in-out;
 }
 
-.highlights-slider img {
+.slider-wrapper {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.slider-wrapper img {
+    width: calc(400% / 4);
     height: 100%;
     object-fit: cover;
+}
+
+.highlights-slider:has(input[value="two"]:checked) .slider-wrapper {
+    transform: translateX(-100%);
+}
+
+.highlights-slider:has(input[value="three"]:checked) .slider-wrapper {
+    transform: translateX(-200%);
+}
+
+.highlights-slider:has(input[value="four"]:checked) .slider-wrapper {
+    transform: translateX(-300%);
 }
 
 .slider-text-wrapper {
