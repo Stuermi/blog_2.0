@@ -257,9 +257,49 @@ details[open] .details-icon {
     cursor: pointer;
 }
 
+.contact-form-input {
+    border: none;
+    border-bottom: solid 1px var(--secondary-brown);
+    color: var(--primary-green);
+    padding: var(--spacing-xs);
+}
+
+.contact-form-input:focus {
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+    min-height: 64px;
+}
+
+.contact-form input[type="checkbox"] {
+    appearance: none;
+    border: 2px solid var(--secondary-brown);
+    height: 20px;
+    min-width: 20px;
+    border-radius: 4px;
+}
+
+.contact-form input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.contact-form input[type="checkbox"]:not(:checked):hover {
+    background-color: var(--primary-yellow);
+}
+
+.contact-form input[type="checkbox"]:checked {
+    border-color: var(--primary-green);
+    background-image: url(./assets/svg/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--primary-green);
+}
+
 footer {
     display: flex;
-    padding: var(--spacing-m);
+    padding: var(--spacing-s);
     gap: var(--spacing-m);
 
 

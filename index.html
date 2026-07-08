@@ -132,20 +132,20 @@
             <form class="contact-form">
                 <label for="name">
                     What's your name?
-                    <input type="text" name="name" required>
+                    <input class="contact-form-input" type="text" name="name" id="name" required>
                 </label>
                 <label for="email">
                     What's your email?
-                    <input type="email" name="email" required>
+                    <input class="contact-form-input" type="email" name="email" id="email" required>
                 </label>
                 <label for="message">
                     How can I help?
-                    <textarea name="message" required></textarea>
+                    <textarea class="contact-form-input" name="message" id="message" maxlength="360" required></textarea>
                 </label>
-                <label for="checkbox" class="row">
-                    <input type="checkbox" required>
+                <label for="checkbox" class="row align-center">
+                    <input type="checkbox" name="checkbox" id="checkbox" required>
                     <p>
-                        I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
+                        I've read the <a target="_blank" href="">privacy policy</a> and agree to the processing of my data as outlined.
                     </p>
                 </label>
                 <input type="submit" value="Send">
