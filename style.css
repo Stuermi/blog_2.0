@@ -64,6 +64,9 @@ main {
     gap: var(--spacing-m);
 
     padding-inline: var(--spacing-m);
+    padding-block: var(--spacing-l);
+
+    width: 100%;
 }
 
 .section-header {
@@ -75,14 +78,130 @@ main {
     width: 32px;
 }
 
-.content-section {
-    padding-block: var(--spacing-l);
+.highlights-slider {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    border-top-right-radius: 100px;
+}
+
+.slider-wrapper {
+    display: flex;
+    position: absolute;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.slider-element {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 100%;
     width: 100%;
 }
 
-.highlights-slider {
-    position: relative;
+.slider-element h4 {
+    color: white;
+}
 
+.slider-text-wrapper {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    padding: var(--spacing-m);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+}
+
+.slider-text-wrapper p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.element-one {
+    background: url(./assets/img/beaches.jpg) center / cover no-repeat;
+}
+
+.element-two {
+    background: url(./assets/img/scandinavia.jpg) center / cover no-repeat;
+}
+
+.element-three {
+    background: url(./assets/img/pattaya.jpg) center / cover no-repeat;
+}
+
+.element-four {
+    background: url(./assets/img/fuji.jpg) center / cover no-repeat;
+}
+
+.slider-input-wrapper {
+    display: flex;
+    z-index: 2;
+    padding-bottom: var(--spacing-m);
+    gap: var(--spacing-m);
+}
+
+.slider-input-wrapper {
+    display: flex;
+    z-index: 2;
+}
+
+.slider-input-radio {
+    appearance: none;
+
+    height: 16px;
+    width: 16px;
+
+    background-color: white;
+
+    border-radius: var(--radius-round);
+}
+
+.slider-input-radio:checked {
+    background-color: var(--primary-yellow);
+    width: 24px;
+    border-radius: var(--radius-capsule);
+}
+
+.highlights-slider:has(input[value="one"]:checked) .slider-wrapper {
+    transform: translateX(0);
+}
+
+.highlights-slider:has(input[value="two"]:checked) .slider-wrapper {
+    transform: translateX(-25%);
+}
+
+.highlights-slider:has(input[value="three"]:checked) .slider-wrapper {
+    transform: translateX(-50%);
+}
+
+.highlights-slider:has(input[value="four"]:checked) .slider-wrapper {
+    transform: translateX(-75%);
+}
+
+
+
+
+
+
+
+
+
+/* .highlights-slider {
     height: 450px;
     width: 100%;
 
@@ -94,16 +213,23 @@ main {
 }
 
 .slider-wrapper {
+    position: relative;
     display: flex;
+    align-items: flex-end;
     width: 400%;
     height: 100%;
     transition: all 0.3s ease-in-out;
 }
 
-.slider-wrapper img {
+.slider-element {
     width: calc(400% / 4);
     height: 100%;
+}
+
+.slider-element img {
     object-fit: cover;
+
+    height: 100%;
 }
 
 .highlights-slider:has(input[value="two"]:checked) .slider-wrapper {
@@ -144,39 +270,16 @@ main {
     color: white;
 }
 
-.slider-input-wrapper {
-    display: flex;
-    gap: var(--spacing-m);
-
-    position: absolute;
-    bottom: var(--spacing-m);
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .slider-text-wrapper p {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+ */
 
-.slider-input-radio {
-    appearance: none;
 
-    height: 16px;
-    width: 16px;
 
-    background-color: white;
-
-    border-radius: var(--radius-round);
-}
-
-.slider-input-radio:checked {
-    background-color: var(--primary-yellow);
-    width: 24px;
-    border-radius: var(--radius-capsule);
-}
 
 .faq-wrapper {
     display: flex;
@@ -372,6 +475,7 @@ footer a {
     background-color: var(--primary-yellow);
 
     padding: var(--spacing-l);
+    z-index: 2;
 }
 
 .mobile-nav__list {
