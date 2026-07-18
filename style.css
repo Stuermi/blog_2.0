@@ -13,12 +13,13 @@
 
 .main-nav ul {
     display: flex;
-    gap: var(--spacing-l);
+    gap: var(--spacing-xl);
     list-style: none;
+    font-family: var(--font-secondary);
 }
 
 .main-nav a {
-    color: white;
+    color: var(--secondary-yellow);
     text-decoration: none;
 }
 
@@ -72,12 +73,17 @@ main {
     flex-direction: column;
     align-items: center;
 
-    gap: var(--spacing-m);
+    gap: var(--spacing-xl);
 
     padding-inline: var(--spacing-m);
     padding-block: var(--spacing-l);
 
     width: 100%;
+}
+
+.subheadline {
+    text-align: center;
+    max-width: 70ch;
 }
 
 .section-header {
@@ -111,8 +117,7 @@ main {
 
 .slider-element {
     position: relative;
-    display: flex;
-    justify-content: center;
+
     color: white;
     height: 100%;
     width: 100%;
@@ -125,13 +130,15 @@ main {
 .slider-text-wrapper {
     position: absolute;
     top: 100px;
+    left: clamp(var(--spacing-m), 3vw, var(--spacing-xl));
+    right: clamp(var(--spacing-m), 3vw, var(--spacing-xl));
     display: flex;
     flex-direction: column;
     gap: var(--spacing-s);
     padding: var(--spacing-m);
     border-left: 1px solid white;
     border-right: 1px solid white;
-    width: 90%;
+    max-width: 720px;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
 }
@@ -180,6 +187,8 @@ main {
     background-color: white;
 
     border-radius: var(--radius-round);
+
+    cursor: pointer;
 }
 
 .slider-input-radio:checked {
@@ -218,6 +227,7 @@ details {
     border-radius: var(--radius-s);
     color: var(--secondary-brown);
     padding: var(--spacing-s);
+    cursor: pointer;
 }
 
 details>p {
@@ -312,6 +322,16 @@ details[open] .details-icon {
     padding: var(--spacing-xs);
 }
 
+.contact-form textarea {
+    font-family: var(--font-primary);
+}
+
+.contact-form-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+}
+
 .contact-form-input:focus {
     outline: none;
 }
@@ -319,6 +339,11 @@ details[open] .details-icon {
 .contact-form textarea {
     resize: none;
     min-height: 64px;
+}
+
+.contact-form-privacy-row {
+    align-items: center;
+    flex-direction: row !important;
 }
 
 .contact-form input[type="checkbox"] {
@@ -348,6 +373,7 @@ details[open] .details-icon {
 footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: var(--spacing-s);
 
     color: white;
@@ -360,7 +386,6 @@ footer a {
 
 .footer-wrapper-left {
     display: flex;
-    align-items: center;
     gap: var(--spacing-xs);
 }
 
@@ -376,7 +401,6 @@ footer a {
 
 .footer-wrapper-left p {
     display: flex;
-    align-items: center;
     gap: var(--spacing-xs);
 }
 
@@ -436,15 +460,15 @@ footer a {
 
 @media screen and (min-width: 768px) {
     .site-header {
-        padding-inline: var(--spacing-xl);
+        padding-inline: var(--max-content-padding);
     }
 
     .hero-section-box {
-        padding-inline: var(--spacing-xl);
+        padding-inline: var(--max-content-padding);
     }
 
     .content-section {
-        padding-inline: var(--spacing-xl);
+        padding-inline: var(--max-content-padding);
     }
 
     main {
@@ -455,9 +479,21 @@ footer a {
         display: none;
     }
 
+    .contact-section {
+        padding-bottom: var(--spacing-2xl);
+    }
+
+    .contact-form {
+        gap: var(--spacing-l);
+    }
+
+    .contact-form-row {
+        gap: var(--spacing-l);
+    }
+
     footer {
         padding-block: var(--spacing-l);
-        padding-inline: var(--spacing-xl);
+        padding-inline: var(--max-content-padding);
     }
 
     .footer-wrapper-left {
@@ -466,5 +502,34 @@ footer a {
 
     .footer-wrapper-left-links {
         gap: var(--spacing-l);
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .subheadline {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contact-form {
+        gap: var(--spacing-xl);
+    }
+
+    .contact-form-row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-form-row label {
+        width: 100%;
+    }
+
+    .contact-form-privacy-row {
+        justify-content: center;
+    }
+
+    footer {
+        padding-block: var(--spacing-xl);
     }
 }

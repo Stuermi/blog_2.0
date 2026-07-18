@@ -3,12 +3,17 @@
     --primary-yellow: #F1C953;
     --secondary-brown: #54370D;
     --secondary-grey: #737373;
+    --secondary-yellow: #F8F5EB;
 
     --spacing-xs: 4px;
     --spacing-s: 8px;
     --spacing-m: 16px;
     --spacing-l: 24px;
     --spacing-xl: 40px;
+    --spacing-2xl: 64px;
+    --spacing-3xl: 96px;
+
+    --max-content-padding: max(var(--spacing-2xl), calc((100% - 1440px) / 2));
 
     --radius-s: 8px;
     --radius-m: 12px;
