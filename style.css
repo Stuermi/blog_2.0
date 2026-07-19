@@ -21,6 +21,29 @@
 .main-nav a {
     color: var(--secondary-yellow);
     text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-highlights:hover {
+    background-image: url(./assets/svg/underline1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.nav-faq:hover {
+    background-image: url(./assets/svg/underline2.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nav-contact:hover {
+    background-image: url(./assets/svg/underline3.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .logo {
@@ -34,7 +57,7 @@ main {
     width: 100%;
     flex: 1;
 
-    gap: var(--spacing-l);
+    gap: var(--spacing-2xl);
 }
 
 .hero-section {
@@ -76,7 +99,6 @@ main {
     gap: var(--spacing-xl);
 
     padding-inline: var(--spacing-m);
-    padding-block: var(--spacing-l);
 
     width: 100%;
 }
@@ -269,11 +291,16 @@ details[open] .details-icon {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-m);
+    font-weight: bold;
 }
 
 .contact-form a {
     color: var(--primary-green);
     padding-inline: var(--spacing-s);
+}
+
+.contact-form p {
+    font-weight: normal;
 }
 
 .contact-form:valid input[type="submit"] {
@@ -409,9 +436,6 @@ footer a {
     align-items: flex-end;
     gap: var(--spacing-s);
 }
-
-
-
 
 .mobile-nav {
     position: fixed;
