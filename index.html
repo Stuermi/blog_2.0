@@ -32,17 +32,20 @@
     </header>
 
     <main>
+        <h1 class="sr-only">
+            Travel Blog
+        </h1>
         <section class="hero-section" id="heroSection">
             <div class="hero-section-box">
                 <div class="hero-section-text-wrapper">
-                    <h2>Cappadocia</h2>
+                    <h2 class="heading-l">Cappadocia</h2>
                     <p>From sunrise balloons to hidden cave dwellings, every moment feels unreal in the best way.</p>
                 </div>
             </div>
         </section>
 
         <section class="content-section" id="highlightsSection">
-            <h2 class="section-header">
+            <h2 class="section-header heading-l">
                 <img src="./assets/icons/rocket_launch-yellow.svg" alt="rocket icon">
                 Highlights
             </h2>
@@ -53,7 +56,7 @@
 
             <div class="highlights-slider">
                 <div class="slider-wrapper">
-                    <a href="" class="slider-element element-one">
+                    <a href="./beaches.html" class="slider-element element-one">
                         <div class="slider-text-wrapper">
                             <h4>The World’s Most Breathtaking Beaches</h4>
                             <p>
@@ -107,7 +110,7 @@
         </section>
 
         <section class="content-section" id="faqSection">
-            <h2 class="section-header">
+            <h2 class="section-header heading-l">
                 <img src="./assets/icons/live-help-yellow.svg" alt="quesionmark icon">
                 FAQ
             </h2>
@@ -183,7 +186,7 @@
         </section>
 
         <section class="content-section contact-section" id="contactSection">
-            <h2 class="section-header">
+            <h2 class="section-header heading-l">
                 <img src="./assets/icons/person_pin-yellow.svg" alt="person icon">
                 Contact
             </h2>
@@ -197,7 +200,7 @@
                 <div class="contact-form-row">
                     <label for="name">
                         What's your name?
-                        <input class="contact-form-input" type="text" name="name" id="name" required>
+                        <input id="nameInput" class="contact-form-input" type="text" name="name" id="name" required>
                     </label>
                     <label for="email">
                         What's your email?
@@ -216,12 +219,14 @@
                         data as outlined.
                     </p>
                 </label>
-                <input type="submit" value="Send">
+                <button class="button contact-form__button" type="submit">
+                    Send
+                </button>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="footer-wrapper-left">
             <p><img src="./assets/icons/copyright.png" alt="Copyright Icon"> Travel Blog 2026</p>
             <div class="footer-wrapper-left-links">
@@ -249,22 +254,22 @@
     <nav class="mobile-nav">
         <ul class="mobile-nav__list">
             <li>
-                <a href="#heroSection">
+                <a href="./index.html#heroSection">
                     <img src="./assets/icons/home.svg" alt="home icon">
                 </a>
             </li>
             <li>
-                <a href="#highlightsSection">
+                <a href="./index.html#highlightsSection">
                     <img src="./assets/icons/rocket_launch-green.svg" alt="rocket icon">
                 </a>
             </li>
             <li>
-                <a href="#faqSection">
+                <a href="./index.html#faqSection">
                     <img src="./assets/icons/live_help-green.svg" alt="questionmark icon">
                 </a>
             </li>
             <li>
-                <a href="#contactSection">
+                <a href="./index.html#contactSection">
                     <img src="./assets/icons/person_pin-green.svg" alt="person icon">
                 </a>
             </li>

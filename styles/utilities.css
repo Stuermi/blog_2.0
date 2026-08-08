@@ -1,3 +1,26 @@
 .hidden {
     display: none;
 }
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    border: 0;
+    padding: 0;
+}
+
+.heading-l {
+    font-family: var(--font-secondary);
+    color: var(--primary-green);
+    font-size: 2rem;
+}
+
+.heading-s {
+    font-family: var(--font-secondary);
+    color: var(--secondary-brown);
+    font-size: 1.25rem;
+}
