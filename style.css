@@ -639,6 +639,43 @@ details[open] .details-icon {
     gap: var(--spacing-l);
 }
 
+.article-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    padding-block: var(--spacing-l);
+}
+
+.article-slider__element {
+    width: 18%;
+    height: 80%;
+    margin-right: -16px;
+
+    background-color: aqua;
+
+    box-shadow: 0px 4px 3px rgba(3, 7, 18, 0.03),
+        0px 14px 11px rgba(3, 7, 18, 0.05),
+        0px 32px 24px rgba(3, 7, 18, 0.08);
+    border-radius: var(--radius-s);
+
+    transform: perspective(250px) rotateY(20deg);
+    transform-origin: center;
+
+    transition: all 250ms ease-in-out;
+}
+
+.article-slider__element:hover {
+    z-index: 2;
+    transform: perspective(250px) rotateY(0deg) scaleX(1.2) scaleY(1.2);
+    margin-left: 32px;
+    margin-right: 16px;
+}
+
+.article-slider__element:hover~.article-slider__element {
+    transform: perspective(250px) rotateY(-20deg);
+}
+
 .article-content ol {
     padding-left: var(--spacing-m);
 }

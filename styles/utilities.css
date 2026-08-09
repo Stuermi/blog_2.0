@@ -20,6 +20,7 @@
 }
 
 .heading-s {
+    text-align: center;
     font-family: var(--font-secondary);
     color: var(--secondary-brown);
     font-size: 1.25rem;
