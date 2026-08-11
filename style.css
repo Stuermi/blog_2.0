@@ -540,6 +540,122 @@ details[open] .details-icon {
     gap: var(--spacing-l);
 }
 
+/* Article Slider - Mobile */
+
+.article-slider-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    gap: var(--spacing-l);
+}
+
+.article-slider-mobile__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-m);
+    height: 350px;
+    transition: transform 250ms ease-in-out;
+}
+
+.article-slider-mobile__image {
+    height: 80%;
+    aspect-ratio: 3/5;
+    object-fit: cover;
+    box-shadow: 0px 4px 3px rgba(3, 7, 18, 0.03),
+        0px 14px 11px rgba(3, 7, 18, 0.05),
+        0px 32px 24px rgba(3, 7, 18, 0.08);
+    border-radius: var(--radius-s);
+
+    transform: perspective(250px) rotateY(20deg);
+
+    transition: transform 250ms ease-in-out;
+}
+
+.article-slider-mobile__input-wrapper {
+    display: flex;
+    z-index: 2;
+    padding-bottom: var(--spacing-m);
+    gap: var(--spacing-s);
+}
+
+.article-slider-mobile__input {
+    appearance: none;
+
+    height: 16px;
+    width: 16px;
+
+    background-color: color-mix(in srgb, var(--primary-green) 20%, transparent);
+
+    border-radius: var(--radius-round);
+
+    cursor: pointer;
+}
+
+.article-slider-mobile__input:checked {
+    background-color: var(--primary-green);
+    width: 32px;
+    border-radius: var(--radius-capsule);
+}
+
+.article-slider-mobile:has(input[value="1"]:checked) .article-slider-mobile__image-wrapper {
+    transform: translateX(calc(2 * (var(--slide-width) + var(--spacing-m))));
+}
+
+.article-slider-mobile:has(input[value="1"]:checked) .article-slider-mobile__image-1 {
+    transform: rotateY(0deg) scale(1.2);
+}
+
+.article-slider-mobile:has(input[value="1"]:checked) .article-slider-mobile__image:nth-child(n+2) {
+    transform: perspective(250px) rotateY(-20deg);
+}
+
+.article-slider-mobile:has(input[value="2"]:checked) .article-slider-mobile__image-wrapper {
+    transform: translateX(calc(var(--slide-width) + var(--spacing-m)));
+}
+
+.article-slider-mobile:has(input[value="2"]:checked) .article-slider-mobile__image-2 {
+    transform: rotateY(0deg) scale(1.2);
+}
+
+.article-slider-mobile:has(input[value="2"]:checked) .article-slider-mobile__image:nth-child(n+3) {
+    transform: perspective(250px) rotateY(-20deg);
+}
+
+.article-slider-mobile:has(input[value="3"]:checked) .article-slider-mobile__image-wrapper {
+    transform: translateX(0);
+}
+
+.article-slider-mobile:has(input[value="3"]:checked) .article-slider-mobile__image-3 {
+    transform: rotateY(0deg) scale(1.2);
+}
+
+.article-slider-mobile:has(input[value="3"]:checked) .article-slider-mobile__image:nth-child(n+4) {
+    transform: perspective(250px) rotateY(-20deg);
+}
+
+.article-slider-mobile:has(input[value="4"]:checked) .article-slider-mobile__image-wrapper {
+    transform: translateX(calc(-1 * (var(--slide-width) + var(--spacing-m))));
+}
+
+.article-slider-mobile:has(input[value="4"]:checked) .article-slider-mobile__image-4 {
+    transform: rotateY(0deg) scale(1.2);
+}
+
+.article-slider-mobile:has(input[value="4"]:checked) .article-slider-mobile__image:nth-child(n+5) {
+    transform: perspective(250px) rotateY(-20deg);
+}
+
+.article-slider-mobile:has(input[value="5"]:checked) .article-slider-mobile__image-wrapper {
+    transform: translateX(calc(-2 * (var(--slide-width) + var(--spacing-m))));
+}
+
+.article-slider-mobile:has(input[value="5"]:checked) .article-slider-mobile__image-5 {
+    transform: rotateY(0deg) scale(1.2);
+}
+
 /* Article Slider - Desktop */
 
 .article-slider-desktop {
@@ -636,7 +752,7 @@ details[open] .details-icon {
     width: 40px;
 }
 
-/* ================================ Media Queries ================================ */
+/* ============================== Media Queries ========================== */
 
 @media screen and (max-width: 767px) {
     .site-header {
@@ -734,6 +850,10 @@ details[open] .details-icon {
 
     .contact-form-privacy-row {
         justify-content: center;
+    }
+
+    .article-slider-mobile {
+        display: none;
     }
 
     .site-footer {
