@@ -224,15 +224,11 @@ main {
 }
 
 .highlights-slider:has(input[value="two"]:checked) .slider-wrapper {
-    transform: translateX(-25%);
+    transform: translateX(-33.3333333%);
 }
 
 .highlights-slider:has(input[value="three"]:checked) .slider-wrapper {
-    transform: translateX(-50%);
-}
-
-.highlights-slider:has(input[value="four"]:checked) .slider-wrapper {
-    transform: translateX(-75%);
+    transform: translateX(-66.6666667%);
 }
 
 .faq-wrapper {
