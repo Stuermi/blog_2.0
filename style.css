@@ -470,6 +470,12 @@ details[open] .details-icon {
     gap: var(--spacing-m);
 }
 
+.article-header__left-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+}
+
 .article-header-title-wrapper {
     display: flex;
     flex-direction: column;
@@ -534,6 +540,13 @@ details[open] .details-icon {
 }
 
 .article-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--spacing-l);
+    gap: var(--spacing-l);
+}
+
+.article-content__ol-wrapper {
     display: flex;
     flex-direction: column;
     padding-top: var(--spacing-l);
@@ -733,6 +746,9 @@ details[open] .details-icon {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    align-self: center;
+    margin-top: var(--spacing-l);
+    max-width: 290px;
     font-family: var(--font-secondary);
     font-weight: bold;
     gap: var(--spacing-2xl);
@@ -774,6 +790,41 @@ details[open] .details-icon {
 
     .footer-wrapper-left-links {
         flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .site-header {
+        padding-inline: var(--spacing-xl);
+    }
+
+    .hero-section-box {
+        padding-inline: var(--spacing-xl);
+    }
+
+    .content-section {
+        padding-inline: var(--spacing-xl);
+    }
+
+    .site-footer {
+        padding-inline: var(--spacing-xl);
+    }
+
+    .mobile-nav {
+        padding-inline: var(--spacing-xl);
+    }
+
+    .main-article {
+        padding-inline: var(--spacing-xl);
+    }
+
+    .article-content__ol-wrapper {
+        padding-inline: var(--spacing-xl);
+    }
+
+    .tips-card {
+        margin-inline: var(--spacing-xl);
+        margin-bottom: var(--spacing-l);
     }
 }
 
@@ -821,6 +872,48 @@ details[open] .details-icon {
 
     .footer-wrapper-left-links {
         gap: var(--spacing-l);
+    }
+
+    .main-article {
+        padding-block: var(--spacing-2xl);
+        padding-inline: var(--max-content-padding);
+    }
+
+    .article-header {
+        flex-direction: row;
+    }
+
+    .article-header__left-wrapper {
+        justify-content: space-between;
+    }
+
+    .article-header__left-wrapper>p {
+        font-size: 1.5rem;
+    }
+
+    .header-intro {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .author-card {
+        min-width: 35%;
+    }
+
+    .heading-s {
+        font-size: 2rem;
+    }
+
+    .article-content__ol-wrapper {
+        padding-inline: var(--spacing-2xl);
+    }
+
+    .tips-card {
+        margin-inline: var(--spacing-2xl);
+        margin-bottom: var(--spacing-l);
     }
 }
 
